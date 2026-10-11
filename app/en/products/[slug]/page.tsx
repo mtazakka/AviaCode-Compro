@@ -1,0 +1,9 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { ProductDetail } from "@/components/detail-page";
+import { products } from "@/lib/content";
+import { alternates, siteUrl } from "@/lib/site";
+
+export function generateStaticParams() { return products.map(x => ({ slug: x.slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> { const { slug } = await params; const item = products.find(x => x.slug === slug); if (!item) return {}; const idPath = `/produk/${slug}`; const enPath = `/en/products/${slug}`; return { title: item.title.en, description: item.summary.en, alternates: { canonical: `${siteUrl}${enPath}`, languages: alternates(idPath, enPath).languages } }; }
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const item = products.find(x => x.slug === slug); if (!item) notFound(); return <ProductDetail item={item} locale="en" />; }
