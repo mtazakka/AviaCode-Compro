@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="t d">
+  <title id="t">Avia Code symbol concept</title>
+  <desc id="d">Abstract angular letter A made from connected blue and teal shapes</desc>
+  <defs>
+    <linearGradient id="aviaBlue" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#0284C7"/></linearGradient>
+    <linearGradient id="aviaTeal" x1="0" x2="1" y1="1" y2="0"><stop offset="0%" stop-color="#14B8A6"/><stop offset="100%" stop-color="#06B6D4"/></linearGradient>
+  </defs>
+  <path d="M22 125 66 34c5-10 9-15 16-15 7 0 12 5 17 15l43 91h-34L82 68l-29 57Z" fill="url(#aviaBlue)"/>
+  <path d="M26 125c-8 0-12-8-8-15l12-21c3-6 9-9 16-9h47c5 0 8 6 4 10l-28 27c-5 5-11 8-18 8Z" fill="url(#aviaTeal)"/>
+  <path d="m56 94-15 21h18l22-21Z" fill="#F8FAFC"/>
+</svg>

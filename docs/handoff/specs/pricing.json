@@ -1,0 +1,28 @@
+{
+  "currency": "IDR",
+  "status": "CEO_DRAFT_UNAPPROVED",
+  "effectiveDate": null,
+  "taxAndThirdPartyCostsIncluded": false,
+  "items": [
+    {"id":"company-profile","labelID":"Website Company Profile","startingPrice":3000000,"unit":"project","publicAfterApproval":true,"scopeNotes":"Up to five sections; business/bilingual/CMS add-ons extra"},
+    {"id":"wedding-lite","labelID":"Undangan Digital Lite","startingPrice":499000,"unit":"invitation","publicAfterApproval":true,"scopeNotes":"Template-based simple event page"},
+    {"id":"wedding-signature","labelID":"Undangan Digital Signature","startingPrice":1500000,"unit":"invitation","publicAfterApproval":true,"scopeNotes":"Custom layout and agreed wedding features"},
+    {"id":"wedding-premium","labelID":"Undangan Digital Premium","startingPrice":2500000,"unit":"invitation","publicAfterApproval":true,"scopeNotes":"Custom scope and additional functionality"},
+    {"id":"pos","labelID":"Dashboard Kasir / POS","startingPrice":7500000,"unit":"project","publicAfterApproval":true,"scopeNotes":"Basic transaction and catalogue dashboard"},
+    {"id":"operations","labelID":"Dashboard Operasional / Supply","startingPrice":10000000,"unit":"project","publicAfterApproval":true,"scopeNotes":"Basic operational data and reports"},
+    {"id":"custom-web","labelID":"Aplikasi Web Custom","startingPrice":15000000,"unit":"project","publicAfterApproval":true,"scopeNotes":"MVP or agreed custom modules"},
+    {"id":"mobile","labelID":"Aplikasi Mobile","startingPrice":25000000,"unit":"project","publicAfterApproval":true,"scopeNotes":"Scope based on platforms and back-end requirements"},
+    {"id":"ai-workflow","labelID":"AI Workflow Automation","startingPrice":3000000,"unit":"simple_workflow","publicAfterApproval":true,"scopeNotes":"Third-party/cloud/model costs excluded"},
+    {"id":"ai-office-onboarding","labelID":"Avia AI Office Pilot Onboarding","startingPrice":3000000,"unit":"one_time","publicAfterApproval":false,"scopeNotes":"Internal idea; validate MVP features and costs"},
+    {"id":"ai-office-pilot","labelID":"Avia AI Office Pilot","startingPrice":1500000,"unit":"month","publicAfterApproval":false,"scopeNotes":"Not a generally available product; proposal only"},
+    {"id":"security-assessment","labelID":"Security Assessment","startingPrice":7500000,"unit":"engagement","publicAfterApproval":false,"scopeNotes":"Requires readiness, signed authorization and scope"},
+    {"id":"pentest","labelID":"Penetration Testing","startingPrice":12000000,"unit":"engagement","publicAfterApproval":false,"scopeNotes":"Requires readiness, signed authorization and scope"},
+    {"id":"security-workspace","labelID":"Avia Security Workspace","startingPrice":null,"unit":"TBD","publicAfterApproval":false,"scopeNotes":"In Development"}
+  ],
+  "estimator": {
+    "limitations": "Nonbinding starting estimates; no false precision or automatic final quotes",
+    "websiteBilingualAddon": 1500000,
+    "websiteCmsAddon": 2000000,
+    "quoteContacts": ["https://wa.me/628122230170","https://wa.me/628969270270"]
+  }
+}

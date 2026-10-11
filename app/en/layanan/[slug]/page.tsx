@@ -1,0 +1,4 @@
+import type { Metadata } from "next"; import { notFound } from "next/navigation"; import { ServiceDetail } from "@/components/service-detail"; import { services } from "@/lib/services"; import { alternates,siteUrl } from "@/lib/site";
+export function generateStaticParams(){ return services.map(x=>({slug:x.slug})); }
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{ const {slug}=await params; const s=services.find(x=>x.slug===slug); if(!s)return {}; return {title:s.en.title,description:s.en.intro,alternates:{canonical:`${siteUrl}/en/layanan/${slug}`,languages:alternates(`/layanan/${slug}`,`/en/layanan/${slug}`).languages}}; }
+export default async function Page({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const s=services.find(x=>x.slug===slug);if(!s)notFound();return <ServiceDetail item={s} locale="en"/>;}

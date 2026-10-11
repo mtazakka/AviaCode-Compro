@@ -1,0 +1,11 @@
+import Link from "next/link";
+import { Header } from "./header";
+import { SimpleFooter } from "./detail-page";
+import { copy } from "@/lib/content";
+import { services } from "@/lib/services";
+import { type Locale, whatsappUrl } from "@/lib/site";
+
+export function ServiceDetail({ item, locale }: { item: (typeof services)[number]; locale: Locale }) {
+  const c = item[locale], id = locale === "id", home = id ? "/" : "/en";
+  return <><Header locale={locale} labels={copy[locale].nav} /><main className="detail-main"><section className="detail-hero"><div className="container"><Link className="back-link" href={`${home}#layanan`}>← {id ? "Kembali ke layanan" : "Back to services"}</Link><div className="service-detail-intro"><div><span className="eyebrow">AVIA CODE / {id ? "LAYANAN" : "SERVICES"}</span><h1>{c.title}</h1><p>{c.intro}</p><div className="ref-actions"><a className="button" href={whatsappUrl(c.title,locale)} target="_blank" rel="noreferrer">{id ? "Diskusikan kebutuhan" : "Discuss your needs"} →</a><Link className="ref-outline-button" href={`${home}#harga`}>{id ? "Lihat estimasi" : "View estimates"}</Link></div></div><div className="service-detail-aside"><span>{id ? "ESTIMASI AWAL" : "STARTING ESTIMATE"}</span><strong>{c.price}</strong><p>{id ? "Proposal final ditentukan setelah discovery, scope, timeline, dan kebutuhan pihak ketiga disepakati." : "The final proposal follows discovery and agreement on scope, timeline, and third-party needs."}</p></div></div></div></section><section className="section detail-body"><div className="container case-grid"><div><span>01 / {id ? "COCOK UNTUK" : "BEST FOR"}</span><h2>{id ? "Siapa yang terbantu?" : "Who is this for?"}</h2><p>{c.audience}</p></div><div><span>02 / {id ? "CAKUPAN" : "SCOPE"}</span><h2>{id ? "Apa yang dapat disiapkan?" : "What can be included?"}</h2><ul>{c.scope.map(x => <li key={x}>{x}</li>)}</ul></div><aside><b>{id ? "Catatan scope" : "Scope note"}</b><p>{c.extras}</p></aside></div></section><section className="detail-cta"><div className="container"><h2>{id ? "Mulai dari masalah yang ingin diselesaikan." : "Start with the problem you want to solve."}</h2><a className="button" href={whatsappUrl(c.title,locale)} target="_blank" rel="noreferrer">{id ? "Konsultasi sekarang" : "Start a consultation"} →</a></div></section></main><SimpleFooter locale={locale} /></>;
+}
